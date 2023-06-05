@@ -1,0 +1,42 @@
+.bgcolor{
+    background: #a8d741;
+}
+.textcolor{
+    color: #a8d741;
+}
+.hoverbtn{
+    transition: .3s;
+}
+.hoverbtn:hover{
+    background-color: white;
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.4); 
+    transform: rotate(7deg) scale(1.1);
+}
+.hoverbtn2{
+    background-color:black;
+    color:white;
+    transition: .3s;
+}
+.hoverbtn2:hover{
+    color: black;
+   background-color: white;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); 
+    transform: rotate(7deg) scale(1.1);
+}
+.hoverbtn:hover i{
+    color: white;
+}
+.redius{
+    border-radius: 20px;
+}
+.topredius{
+    border-radius: 20px 20px 0 0 ;
+}
+
+.top-left-bottom{
+    border-radius: 20px  0 0 20px ;
+}
+.top-rigt-bottom{
+    border-radius:   0  20px 20px 0 ;
+}
+

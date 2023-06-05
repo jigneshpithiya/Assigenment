@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }    
+        body {
+            background: #000;
+        }
+        h1 {
+            text-align: center;
+            color: #eff5d4;
+        }
+        .showSlide {
+            height: 450px;
+            width: 100%;
+            display: none;            
+        }
+        .slide1 {
+            background: yellow;
+        }
+        .slide2 {
+            background: red;
+        }
+        .slide3 {
+            background: purple;
+        }
+        .slide4 {
+            background:green;
+        }
+        .slide5 {
+            background:lightseagreen;
+        }
+        .showSlide img {
+            height: 450px;
+            width: 100%;
+        }
+        .slidercontainer {
+            width: 50%;
+            position: relative;
+            margin:0px auto;
+        }
+        .left, .right {
+            cursor: pointer;
+            position: absolute;
+            top: 100%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .left:hover, .right:hover {
+            background-color: rgba(115, 115, 115, 0.8);
+        }
+        .content {
+            color: #eff5d4;
+            font-size: 30px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .active {
+            background-color: #717171;
+        }
+
+    </style>
+    </head>
+        <body>
+        <div class="slidercontainer">
+        <h1>Simple Javascript </h1>
+        <div class="showSlide slide1 fade">
+        </div>
+        <div class="showSlide slide2 fade">
+        </div>
+
+        <div class="showSlide slide3 fade">
+        </div>
+        <div class="showSlide slide4 fade">
+        </div>
+        <div class="showSlide slide5 fade">
+        </div>
+        <a class="left" onclick="nextSlide(-1)">&lt</a>
+        <a class="right" onclick="nextSlide(1)">&gt</a>
+    </div>
+
+    <script>
+        var slide_index = 1;
+        displaySlides(slide_index);
+
+        function nextSlide(n) {
+            displaySlides(slide_index += n);
+        }
+
+        function currentSlide(n) {
+            displaySlides(slide_index = n);
+        }
+
+        function displaySlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("showSlide");
+            if (n > slides.length) { slide_index = 1 }
+            if (n < 1) { slide_index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide_index - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
+    
+</body>
+</html>
